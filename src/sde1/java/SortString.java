@@ -27,7 +27,7 @@ public class SortString {
             if ((a - b) >= 1 || a == b){
                 stack.push(str.charAt(i));
             }else if ((b - a) >= 1){ // if small then add to tempStack
-                // puss all greater elements
+                // push all greater elements
                 while ((b - a) >= 1){
                     // push
                     tempStack.push(stack.peek());
@@ -41,10 +41,10 @@ public class SortString {
                     }
                 }
 
-                // push i-th character
+                // push i-th character to stack
                 stack.push(str.charAt(i));
 
-                // push tempStack bak to stack
+                // push tempStack back to stack
                 while (!tempStack.isEmpty()){
                     stack.push(tempStack.peek());
                     tempStack.pop();
